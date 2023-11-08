@@ -1,4 +1,4 @@
-module loadinitms
+module github.com/gregperez/loadinitms
 
 go 1.20
 
