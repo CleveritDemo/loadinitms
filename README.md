@@ -18,8 +18,6 @@ go get github.com/gregperez/loadinitms
 
 ## Usage
 
-code example:
-
 ```go
 package main
 
