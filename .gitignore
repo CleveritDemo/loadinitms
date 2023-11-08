@@ -1,5 +1,6 @@
 # IntelliJ IDEA
 .idea/
+*.iml
 
 # Go-specific
 # Compiled Object files, Static and Dynamic libs (Windows, macOS, Linux)
