@@ -13,7 +13,7 @@ loadinitms is a lightweight microservice framework for managing properties, runn
 To use loadinitms in your Go project, you can install it using `go get`:
 
 ```bash
-go get github.com/gregperez/loadinitms
+go get github.com/gregperez/loadinitms@latest
 ```
 
 ## Usage
@@ -39,4 +39,11 @@ func main() {
 	// Run loadinitms
 	lms.Run()
 }
+```
+
+## Tagging
+
+```
+git tag vX.X.X
+git push origin --tags
 ```
