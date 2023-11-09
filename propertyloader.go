@@ -65,8 +65,8 @@ func loadPropertiesFromProperties(filename string) {
 	log.Println("Property loading from the .properties file has been completed: ", filePath)
 }
 
-// LoadProperties loads the properties from the YAML or .properties file.
-func LoadProperties() {
+// loadProperties loads the properties from the YAML or .properties file.
+func loadProperties() {
 	ext := filepath.Ext(filePath)
 
 	filename, err := filepath.Abs(filePath)
