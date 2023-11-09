@@ -16,8 +16,8 @@ func AddPrimary(primary PrimaryProcess) {
 	primaries = append(primaries, primary)
 }
 
-// RunPrimaries runs all the primaries concurrently
-func RunPrimaries() {
+// runPrimaries runs all the primaries concurrently
+func runPrimaries() {
 	done := make(chan struct{})
 
 	for _, primary := range primaries {
