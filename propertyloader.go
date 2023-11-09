@@ -1,13 +1,12 @@
 package loadinitms
 
 import (
+	"github.com/magiconair/properties"
+	"gopkg.in/yaml.v3"
 	"log"
 	"os"
 	"path/filepath"
 	"reflect"
-
-	"github.com/magiconair/properties"
-	"gopkg.in/yaml.v3"
 )
 
 var (
@@ -17,14 +16,14 @@ var (
 
 // SetPropertyFilePath sets the property file path. Default is "resources/properties.yml"
 func SetPropertyFilePath(path string) {
-	if pType := reflect.TypeOf(path); pType.Kind() != reflect.Ptr || pType.Elem().Kind() != reflect.Struct {
-		log.Fatalf("Property must be a pointer to a struct. Got %v", pType)
-	}
 	filePath = path
 }
 
 // AddProperty adds a property to the list of properties.
 func AddProperty(p interface{}) {
+	if pType := reflect.TypeOf(p); pType.Kind() != reflect.Ptr || pType.Elem().Kind() != reflect.Struct {
+		log.Fatalf("Property must be a pointer to a struct. Got %v", pType)
+	}
 	propertiesList = append(propertiesList, p)
 }
 
