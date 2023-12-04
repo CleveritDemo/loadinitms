@@ -41,6 +41,12 @@ func main() {
 }
 ```
 
+## Testing
+
+```bash
+go test ./...
+```
+
 ## Tagging
 
 ```
